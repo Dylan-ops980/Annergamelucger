@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ANNER — Neon Game Launcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="snow-canvas"></canvas>
+<div class="grain"></div>
+<header class="nav">
+  <a class="brand" href="#home">A<span>NNER</span></a>
+  <nav><a href="#home">HOME</a><a href="#games">LIBRARY</a><a href="#categories">CATEGORIES</a></nav>
+  <div class="nav-actions"><button id="searchBtn">⌕</button><button id="soundBtn">♫</button><button class="profile">A</button></div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-scan"></div>
+  <div class="hero-copy">
+    <p class="kicker">WELCOME BACK, PLAYER</p>
+    <h1>ANNER</h1>
+    <p class="hero-desc">YOUR NEON GAME UNIVERSE</p>
+    <div class="hero-actions"><a class="btn primary" href="#games">PLAY NOW <b>→</b></a><a class="btn ghost" href="#games">BROWSE 20 GAMES</a></div>
+    <div class="stats"><span><b>20</b> GAMES</span><i></i><span><b>08</b> CATEGORIES</span><i></i><span><b>∞</b> FUN</span></div>
+  </div>
+  <div class="featured">
+    <div class="featured-image" style="background-image:url('https://ethlan.fr/img/jeux/121.jpg')"></div>
+    <div class="featured-overlay"></div>
+    <div class="featured-info"><span>FEATURED</span><h2>MINECRAFT</h2><p>CREATE · EXPLORE · SURVIVE</p><button class="mini-play" data-game="Minecraft">PLAY <span>▶</span></button></div>
+  </div>
+  <div class="scroll">SCROLL <span>↓</span></div>
+</section>
+
+<section class="library" id="games">
+  <div class="library-top">
+    <div><p class="kicker">YOUR LIBRARY</p><h2>CHOOSE YOUR <em>GAME</em></h2></div>
+    <div class="search-wrap"><span>⌕</span><input id="searchInput" placeholder="Search games..."></div>
+  </div>
+  <div class="filters" id="categories">
+    <button class="filter active" data-filter="All">ALL</button><button class="filter" data-filter="Action">ACTION</button><button class="filter" data-filter="Adventure">ADVENTURE</button><button class="filter" data-filter="Racing">RACING</button><button class="filter" data-filter="Indie">INDIE</button><button class="filter" data-filter="Multiplayer">MULTIPLAYER</button>
+  </div>
+  <div class="game-grid" id="gameGrid"></div>
+</section>
+
+<section class="bottom-cta"><p class="kicker">THE ARCADE NEVER SLEEPS</p><h2>READY TO <span>PLAY?</span></h2><a class="btn primary" href="#games">OPEN LIBRARY <b>→</b></a></section>
+</main>
+<footer><span>ANNER © 2026</span><span>NEON GAME LAUNCHER</span></footer>
+
+<div class="modal" id="modal"><div class="modal-backdrop" data-close></div><div class="modal-card">
+<button class="close" data-close>×</button><img id="modalImg" alt=""><div class="modal-body"><p class="kicker">GAME READY</p><h2 id="modalTitle"></h2><p id="modalMeta"></p><p id="modalDesc">Connect this card to your own game URL, embed, or local game file to turn it into a playable launcher.</p><button class="btn primary" id="launch">LAUNCH GAME <b>→</b></button></div>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
